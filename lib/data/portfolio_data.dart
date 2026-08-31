@@ -212,11 +212,13 @@ abstract final class PortfolioData {
   ];
 
   static const projects = <PortfolioProject>[
+    // 1. REWAA | رواء (MAIN FEATURED PROJECT)
     PortfolioProject(
-      title: 'Rwaa',
+      title: 'REWAA',
       arabicTitle: 'رواء',
       category: 'Consultation',
       role: 'Lead Flutter Developer',
+      isFeatured: true,
       description:
           'منصة استشارات رائدة تتيح التواصل الفوري والمباشر مع نخبة من الخبراء والمستشارين المتخصصين في مجالات متعددة، مع واجهة مستخدم سهلة وسرية تامة للمحادثات.',
       tags: ['Flutter', 'Clean Arch', 'BLoC', 'Consultation', 'Encrypted Chat', 'Stripe', 'FCM'],
@@ -238,88 +240,8 @@ abstract final class PortfolioData {
       ],
       metrics: ['متوفر على Google Play', 'متوفر على App Store', 'سرية وأمان 100%'],
     ),
-    PortfolioProject(
-      title: 'Madariscom',
-      arabicTitle: 'مدارسكم',
-      category: 'Education',
-      role: 'Lead Flutter Developer',
-      description:
-          'Comprehensive education communication ecosystem linking students, parents, and schools with real-time academic tracking, fee settlements, exams, and instant messaging.',
-      tags: ['Flutter', 'Clean Arch', 'BLoC', 'Dio', 'FCM', 'Payments'],
-      icon: '02',
-      architecture: 'Clean Architecture with BLoC Pattern & Dio Interceptors',
-      keyHighlights: [
-        'Engineered live chat & announcement feed with WebSocket / FCM fallback.',
-        'Integrated online fee installment processing via secure payment gateway.',
-        'Built full offline timetable and homework cache with Hive local storage.',
-        'Supported complete RTL/LTR localization with Arabic academic terminology.',
-      ],
-      challengesAndSolutions: [
-        'Challenge: High latency during school announcement surges. Solution: Cached feeds with optimistic UI updates and background delta sync.',
-      ],
-      metrics: ['50k+ Active Users', '99.9% Crash-Free', '60 FPS Transitions'],
-    ),
-    PortfolioProject(
-      title: 'Dalilkom',
-      arabicTitle: 'دليلكم',
-      category: 'Local Services',
-      role: 'Flutter Developer',
-      description:
-          'Smart daily-life discovery hub allowing users to explore local businesses, service providers, operational hours, offers, and turn-by-turn navigation.',
-      tags: ['Flutter', 'Google Maps', 'Geolocation', 'Cubit', 'REST API'],
-      icon: '03',
-      architecture: 'Feature-First Clean Architecture with Cubit & Geolocation Service',
-      keyHighlights: [
-        'Implemented clustered Google Maps markers with custom interactive pin widgets.',
-        'Real-time proximity search using radius calculation and location streams.',
-        'Interactive business profiles with dynamic reviews, photos, and direct booking.',
-        'Fast full-text search with debounce and query caching.',
-      ],
-      challengesAndSolutions: [
-        'Challenge: Battery drain from frequent location updates. Solution: Smart adaptive geofencing and throttle stream listeners.',
-      ],
-      metrics: ['Instant Nearby Search', 'Clustered 10k+ Points of Interest'],
-    ),
-    PortfolioProject(
-      title: 'Al-Awael School',
-      arabicTitle: 'مدرسة الأوائل',
-      category: 'Education',
-      role: 'Mobile Developer',
-      description:
-          'Specialized school portal for study and exam timetables, homework submissions, report cards, fee tracking, and direct teacher-parent conferences.',
-      tags: ['Flutter', 'BLoC', 'Dio', 'Notifications', 'Hive'],
-      icon: '04',
-      architecture: 'Clean Architecture + Repository Pattern + Hive Cache',
-      keyHighlights: [
-        'Interactive student grade report cards with dynamic visual progress charts.',
-        'Document and assignment attachment uploaders with chunked retry mechanisms.',
-        'Actionable local push notifications for upcoming exams and assignment deadlines.',
-      ],
-      challengesAndSolutions: [
-        'Challenge: Large PDF syllabus rendering on low-end devices. Solution: Stream-rendered vector previews and lazy memory cleanup.',
-      ],
-      metrics: ['10+ Schools Onboarded', 'Zero Lag on Low-End Devices'],
-    ),
-    PortfolioProject(
-      title: 'Abber',
-      arabicTitle: 'عبر',
-      category: 'Consultation',
-      role: 'Flutter Developer',
-      description:
-          'Premier digital consultation platform connecting verified specialists with users for confidential vision analysis, advisory sessions, and scheduled consultations.',
-      tags: ['Flutter', 'Consultation', 'Audio Notes', 'Stripe', 'Cubit'],
-      icon: '05',
-      architecture: 'Clean Architecture with State Machine & Encrypted Storage',
-      keyHighlights: [
-        'In-app voice recording, waveform visualization, and asynchronous audio playback.',
-        'Confidential end-to-end encrypted messaging and consultation booking engine.',
-        'Secure multi-tier consultation pricing with Stripe checkout integration.',
-      ],
-      challengesAndSolutions: [
-        'Challenge: Privacy and data confidentiality. Solution: Ephemeral tokens and localized encrypted storage with Hive AES.',
-      ],
-      metrics: ['4.9★ Average Rating', 'Secure Payments via Stripe'],
-    ),
+
+    // 2. محامينا
     PortfolioProject(
       title: 'Mohamina',
       arabicTitle: 'محامينا',
@@ -328,8 +250,12 @@ abstract final class PortfolioData {
       description:
           'On-demand legal services platform empowering clients to submit case briefs, find specialized licensed lawyers by jurisdiction, and book legal consultations.',
       tags: ['Flutter', 'Legal Tech', 'Maps', 'Dio', 'Clean Architecture'],
-      icon: '06',
+      icon: '02',
       architecture: 'Clean Architecture with Domain UseCases & Token Interceptors',
+      playStoreUrl:
+          'https://play.google.com/store/apps/details?id=com.elnooronline.muhamina&pcampaignid=web_share',
+      appStoreUrl:
+          'https://apps.apple.com/eg/app/%D9%85%D8%AD%D8%A7%D9%85%D9%8A%D9%86%D8%A7/id1419653949',
       keyHighlights: [
         'Structured case brief wizard with document attachments and confidentiality agreements.',
         'Lawyer directory with specialty filtering, rating systems, and appointment scheduler.',
@@ -340,16 +266,48 @@ abstract final class PortfolioData {
       ],
       metrics: ['200+ Verified Attorneys', 'Automated Calendar Sync'],
     ),
+
+    // 3. Abber App | عبر
     PortfolioProject(
-      title: 'iQTaxi Driver & User',
+      title: 'Abber App',
+      arabicTitle: 'عبر',
+      category: 'Consultation',
+      role: 'Flutter Developer',
+      description:
+          'Premier digital consultation platform connecting verified specialists with users for confidential vision analysis, advisory sessions, and scheduled consultations.',
+      tags: ['Flutter', 'Consultation', 'Audio Notes', 'Stripe', 'Cubit'],
+      icon: '03',
+      architecture: 'Clean Architecture with State Machine & Encrypted Storage',
+      playStoreUrl:
+          'https://play.google.com/store/apps/details?id=com.app.abber&pcampaignid=web_share',
+      appStoreUrl:
+          'https://apps.apple.com/eg/app/%D8%B9%D8%A8%D8%B1-abber/id6450137342?l=ar',
+      keyHighlights: [
+        'In-app voice recording, waveform visualization, and asynchronous audio playback.',
+        'Confidential end-to-end encrypted messaging and consultation booking engine.',
+        'Secure multi-tier consultation pricing with Stripe checkout integration.',
+      ],
+      challengesAndSolutions: [
+        'Challenge: Privacy and data confidentiality. Solution: Ephemeral tokens and localized encrypted storage with Hive AES.',
+      ],
+      metrics: ['4.9★ Average Rating', 'Secure Payments via Stripe'],
+    ),
+
+    // 4. iQTaxi | Taxi Driver & Taxi User App
+    PortfolioProject(
+      title: 'iQTaxi',
       arabicTitle: 'آي كيو تاكسي',
       category: 'Ride-Hailing',
       role: 'Senior Flutter Developer',
       description:
           'Dual ride-hailing ecosystem providing real-time driver dispatching, live turn-by-turn routing, automated fare metering, and seamless payment collection.',
       tags: ['Flutter', 'Google Maps', 'WebSockets', 'BLoC', 'HyperPay'],
-      icon: '07',
+      icon: '04',
       architecture: 'Clean Architecture + WebSocket State Stream + Custom Painter Routes',
+      playStoreUrl:
+          'https://play.google.com/store/apps/details?id=com.elnooronline.taxi.user&pcampaignid=web_share',
+      appStoreUrl:
+          'https://apps.apple.com/eg/app/iq-taxi/id6757102454',
       keyHighlights: [
         'Smooth driver car movement animation on map utilizing bearing interpolation.',
         'Live fare calculation engine taking traffic, duration, and surge multiplier into account.',
@@ -361,6 +319,8 @@ abstract final class PortfolioData {
       ],
       metrics: ['Real-time 60fps Map Tracking', 'Dual Driver/Rider Codebase'],
     ),
+
+    // 5. NOVA X
     PortfolioProject(
       title: 'NOVA X',
       arabicTitle: 'نوفا إكس',
@@ -369,8 +329,12 @@ abstract final class PortfolioData {
       description:
           'Next-generation interactive learning platform offering curated video courses, live streaming masterclasses, quizzes, and downloadable learning certificates.',
       tags: ['Flutter', 'Video Player', 'In-App Purchase', 'Offline Mode'],
-      icon: '08',
+      icon: '05',
       architecture: 'Clean Architecture with Custom Video Player Controller & DRM',
+      playStoreUrl:
+          'https://play.google.com/store/apps/details?id=com.elnooreonline.elms&pcampaignid=web_share',
+      appStoreUrl:
+          'https://apps.apple.com/eg/app/nova-x/id6761002440',
       keyHighlights: [
         'Custom interactive video player with playback speeds, bookmarks, and chapter skips.',
         'Secure encrypted offline lesson downloads preventing unauthorized video extraction.',
@@ -381,6 +345,88 @@ abstract final class PortfolioData {
       ],
       metrics: ['Offline Video Caching', 'Interactive Chapter Quizzes'],
     ),
+
+    // 6. مدرسة الأوائل
+    PortfolioProject(
+      title: 'Al-Awael School',
+      arabicTitle: 'مدرسة الأوائل',
+      category: 'Education',
+      role: 'Mobile Developer',
+      description:
+          'Specialized school portal for study and exam timetables, homework submissions, report cards, fee tracking, and direct teacher-parent conferences.',
+      tags: ['Flutter', 'BLoC', 'Dio', 'Notifications', 'Hive'],
+      icon: '06',
+      architecture: 'Clean Architecture + Repository Pattern + Hive Cache',
+      playStoreUrl:
+          'https://play.google.com/store/apps/details?id=com.elnooronline.alawael&pcampaignid=web_share',
+      appStoreUrl:
+          'https://apps.apple.com/eg/app/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A7%D9%84%D8%A3%D9%88%D8%A7%D8%A6%D9%84-%D8%A7%D9%84%D8%A3%D9%87%D9%84%D9%8A%D8%A9/id1631025008?l=ar',
+      keyHighlights: [
+        'Interactive student grade report cards with dynamic visual progress charts.',
+        'Document and assignment attachment uploaders with chunked retry mechanisms.',
+        'Actionable local push notifications for upcoming exams and assignment deadlines.',
+      ],
+      challengesAndSolutions: [
+        'Challenge: Large PDF syllabus rendering on low-end devices. Solution: Stream-rendered vector previews and lazy memory cleanup.',
+      ],
+      metrics: ['10+ Schools Onboarded', 'Zero Lag on Low-End Devices'],
+    ),
+
+    // 7. مدارسكم
+    PortfolioProject(
+      title: 'Madariscom',
+      arabicTitle: 'مدارسكم',
+      category: 'Education',
+      role: 'Lead Flutter Developer',
+      description:
+          'Comprehensive education communication ecosystem linking students, parents, and schools with real-time academic tracking, fee settlements, exams, and instant messaging.',
+      tags: ['Flutter', 'Clean Arch', 'BLoC', 'Dio', 'FCM', 'Payments'],
+      icon: '07',
+      architecture: 'Clean Architecture with BLoC Pattern & Dio Interceptors',
+      playStoreUrl:
+          'https://play.google.com/store/apps/details?id=com.elnooronline.madaresco&pcampaignid=web_share',
+      appStoreUrl:
+          'https://apps.apple.com/eg/app/your-schools-%D9%85%D8%AF%D8%A7%D8%B1%D8%B3%D9%83%D9%85/id1459034556?l=ar',
+      keyHighlights: [
+        'Engineered live chat & announcement feed with WebSocket / FCM fallback.',
+        'Integrated online fee installment processing via secure payment gateway.',
+        'Built full offline timetable and homework cache with Hive local storage.',
+        'Supported complete RTL/LTR localization with Arabic academic terminology.',
+      ],
+      challengesAndSolutions: [
+        'Challenge: High latency during school announcement surges. Solution: Cached feeds with optimistic UI updates and background delta sync.',
+      ],
+      metrics: ['50k+ Active Users', '99.9% Crash-Free', '60 FPS Transitions'],
+    ),
+
+    // 8. دليلكم
+    PortfolioProject(
+      title: 'Dalilkom',
+      arabicTitle: 'دليلكم',
+      category: 'Local Services',
+      role: 'Flutter Developer',
+      description:
+          'Smart daily-life discovery hub allowing users to explore local businesses, service providers, operational hours, offers, and turn-by-turn navigation.',
+      tags: ['Flutter', 'Google Maps', 'Geolocation', 'Cubit', 'REST API'],
+      icon: '08',
+      architecture: 'Feature-First Clean Architecture with Cubit & Geolocation Service',
+      playStoreUrl:
+          'https://play.google.com/store/apps/details?id=com.elnooronline.dalilkoom&pcampaignid=web_share',
+      appStoreUrl:
+          'https://apps.apple.com/eg/app/%D8%AF%D9%84%D9%8A%D9%84%D9%83%D9%85-%D8%A7%D9%84%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D8%B4%D8%A7%D9%85%D9%84/id1544250802?l=ar',
+      keyHighlights: [
+        'Implemented clustered Google Maps markers with custom interactive pin widgets.',
+        'Real-time proximity search using radius calculation and location streams.',
+        'Interactive business profiles with dynamic reviews, photos, and direct booking.',
+        'Fast full-text search with debounce and query caching.',
+      ],
+      challengesAndSolutions: [
+        'Challenge: Battery drain from frequent location updates. Solution: Smart adaptive geofencing and throttle stream listeners.',
+      ],
+      metrics: ['Instant Nearby Search', 'Clustered 10k+ Points of Interest'],
+    ),
+
+    // 9. CHAMBER TABUK | غرفة تبوك
     PortfolioProject(
       title: 'Chamber Tabuk',
       arabicTitle: 'غرفة تبوك',
@@ -391,6 +437,10 @@ abstract final class PortfolioData {
       tags: ['Flutter', 'Enterprise', 'PDF Export', 'Clean Arch', 'FCM'],
       icon: '09',
       architecture: 'Clean Architecture with Role-Based Access Control',
+      playStoreUrl:
+          'https://play.google.com/store/apps/details?id=com.elnooronline.tabukchamber&pcampaignid=web_share',
+      appStoreUrl:
+          'https://apps.apple.com/eg/app/tabuk-chamber-%D8%BA%D8%B1%D9%81%D8%A9-%D8%AA%D8%A8%D9%88%D9%83/id6758669687',
       keyHighlights: [
         'Enterprise circular distribution with priority push notification broadcast.',
         'Committee scheduling, agenda voting, and authenticated attendance tracking.',

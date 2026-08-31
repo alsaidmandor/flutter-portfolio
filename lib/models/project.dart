@@ -11,6 +11,7 @@ class PortfolioProject {
     this.keyHighlights = const [],
     this.challengesAndSolutions = const [],
     this.metrics = const [],
+    this.isFeatured = false,
     this.playStoreUrl,
     this.appStoreUrl,
     this.demoUrl,
@@ -27,6 +28,7 @@ class PortfolioProject {
   final List<String> keyHighlights;
   final List<String> challengesAndSolutions;
   final List<String> metrics;
+  final bool isFeatured;
   final String? playStoreUrl;
   final String? appStoreUrl;
   final String? demoUrl;

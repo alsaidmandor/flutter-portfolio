@@ -294,7 +294,7 @@ class ProjectDetailModal extends StatelessWidget {
                           onPressed: () async {
                             final uri = Uri.parse(project.playStoreUrl!);
                             if (await canLaunchUrl(uri)) {
-                              await launchUrl(uri);
+                              await launchUrl(uri, mode: LaunchMode.externalApplication);
                             }
                           },
                           icon: const Icon(Icons.shop_two_rounded, size: 18),
@@ -312,7 +312,7 @@ class ProjectDetailModal extends StatelessWidget {
                           onPressed: () async {
                             final uri = Uri.parse(project.appStoreUrl!);
                             if (await canLaunchUrl(uri)) {
-                              await launchUrl(uri);
+                              await launchUrl(uri, mode: LaunchMode.externalApplication);
                             }
                           },
                           icon: const Icon(Icons.apple_rounded, size: 18),
