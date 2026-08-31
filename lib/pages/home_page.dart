@@ -298,14 +298,24 @@ class _HomePageState extends State<HomePage> {
                 onTap: () => _goTo(_projectsKey),
               ),
               _SecondaryButton(
-                label: 'Copy Email',
-                icon: Icons.copy_rounded,
-                onTap: () => _copyToClipboard(PortfolioData.email, 'Email address'),
+                label: 'LinkedIn',
+                icon: Icons.work_outline_rounded,
+                onTap: () => _launch(PortfolioData.linkedinUrl),
+              ),
+              _SecondaryButton(
+                label: 'GitHub',
+                icon: Icons.code_rounded,
+                onTap: () => _launch(PortfolioData.githubUrl),
               ),
               _SecondaryButton(
                 label: 'WhatsApp',
                 icon: Icons.chat_rounded,
                 onTap: () => _launch('https://wa.me/${PortfolioData.whatsapp}'),
+              ),
+              _SecondaryButton(
+                label: 'Copy Email',
+                icon: Icons.copy_rounded,
+                onTap: () => _copyToClipboard(PortfolioData.email, 'Email address'),
               ),
             ],
           ),
@@ -845,6 +855,16 @@ class _HomePageState extends State<HomePage> {
                   label: PortfolioData.email,
                   icon: Icons.mail_rounded,
                   onTap: () => _launch('mailto:${PortfolioData.email}'),
+                ),
+                _SecondaryButton(
+                  label: 'LinkedIn Profile',
+                  icon: Icons.work_outline_rounded,
+                  onTap: () => _launch(PortfolioData.linkedinUrl),
+                ),
+                _SecondaryButton(
+                  label: 'GitHub Profile',
+                  icon: Icons.code_rounded,
+                  onTap: () => _launch(PortfolioData.githubUrl),
                 ),
                 _SecondaryButton(
                   label: 'WhatsApp Chat',

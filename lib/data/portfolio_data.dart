@@ -22,7 +22,7 @@ abstract final class PortfolioData {
   static const whatsapp = '+201559847533';
 
   static const githubUrl = 'https://github.com/alsaidmandor';
-  static const linkedinUrl = 'https://linkedin.com';
+  static const linkedinUrl = 'https://www.linkedin.com/in/alsaeid-mandor-a9675a330';
 
   static const summary =
       'Passionate Flutter Engineer with 3+ years of enterprise mobile experience crafting scalable, robust, high-performance applications. Master of Clean Architecture, SOLID principles, BLoC/Cubit state management, and seamless integrations across REST APIs, Firebase, Google Maps, offline persistence, and multi-gateway payments.';
