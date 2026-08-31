@@ -1,0 +1,11 @@
+{
+  "name": "Alsaeed Mandor | Flutter Developer",
+  "short_name": "Alsaeed Mandor",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#07111F",
+  "theme_color": "#07111F",
+  "description": "Animated Flutter developer portfolio.",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false
+}

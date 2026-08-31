@@ -1,0 +1,56 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Visual Studio Code related
+.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+
+# Web related
+lib/generated_plugin_registrant.dart
+
+# Sensitive files / Secrets / Keys / Environment
+*.env
+*.env.*
+*.p12
+*.jks
+*.keystore
+*.cer
+*.crt
+*.pem
+*.key
+key.properties
+google-services.json
+GoogleService-Info.plist
+firebase_options.dart.bak
+
+# Symbols and Debug files
+*.symbols
+*.map
+app.*.symbols
+app.*.map.json
+
