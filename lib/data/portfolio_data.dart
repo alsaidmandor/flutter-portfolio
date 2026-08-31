@@ -21,7 +21,7 @@ abstract final class PortfolioData {
   static const phone = '+20 1559847533';
   static const whatsapp = '+201559847533';
 
-  static const githubUrl = 'https://github.com';
+  static const githubUrl = 'https://github.com/alsaidmandor';
   static const linkedinUrl = 'https://linkedin.com';
 
   static const summary =
