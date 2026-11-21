@@ -29,7 +29,7 @@ abstract final class PortfolioData {
 
   static const keyMetrics = [
     (value: '3+', label: 'Years Experience', highlight: 'Enterprise & Startups'),
-    (value: '9+', label: 'Production Apps', highlight: 'Consultation, Education, Rides'),
+    (value: '10+', label: 'Production Apps', highlight: 'Marketplaces, Consultation, Rides'),
     (value: '100%', label: 'Clean Architecture', highlight: 'Testable & Maintainable'),
     (value: '60 FPS', label: 'Smooth UX', highlight: 'Zero Lag & Leak-Free'),
   ];
@@ -197,6 +197,19 @@ abstract final class PortfolioData {
       stack: ['Flutter', 'Clean Architecture', 'BLoC', 'Dio', 'HyperPay', 'Google Maps', 'Hive'],
     ),
     (
+      company: 'Mega Service Group',
+      role: 'Flutter Developer',
+      location: 'Australia (Remote)',
+      period: 'Jun 2025 – May 2026',
+      highlights: [
+        'Architected and delivered Otasky, an on-demand two-sided service marketplace connecting clients and taskers.',
+        'Implemented secure Stripe payment flows, wallet balance, transaction logs, and payout withdrawal management.',
+        'Engineered real-time in-app chat, proposal comparison wizard, task bidding, and push notification alerts.',
+        'Maintained high code quality and testability utilizing Clean Architecture and BLoC state management.',
+      ],
+      stack: ['Flutter', 'Clean Architecture', 'BLoC', 'Stripe', 'REST APIs', 'Real-Time Chat', 'FCM'],
+    ),
+    (
       company: 'Rmoztec',
       role: 'Mobile Application Developer',
       location: 'Mansoura, Egypt',
@@ -212,17 +225,44 @@ abstract final class PortfolioData {
   ];
 
   static const projects = <PortfolioProject>[
-    // 1. REWAA | رواء (MAIN FEATURED PROJECT)
+    // 1. OTASKY | أوتاسكي (MAIN FEATURED MARKETPLACE PROJECT)
+    PortfolioProject(
+      title: 'Otasky',
+      arabicTitle: 'أوتاسكي',
+      category: 'Service Marketplace',
+      role: 'Flutter Developer',
+      isFeatured: true,
+      description:
+          'منصة خدمات تفاعلية متطورة تربط بين طالبي الخدمات ومقدميها، تتيح نشر المهام ومقارنة العروض وتعيين المحترفين مع نظام محادثات فوري وإدارة كاملة للمحفظة والدفع الإلكتروني عبر Stripe.',
+      tags: ['Flutter', 'Clean Arch', 'BLoC', 'Marketplace', 'Stripe', 'Real-Time Chat', 'FCM'],
+      icon: '01',
+      architecture: 'Clean Architecture with BLoC Pattern & Real-Time Chat Engine',
+      playStoreUrl:
+          'https://play.google.com/store/apps/details?id=com.mega.serve.group.otasky',
+      appStoreUrl:
+          'https://apps.apple.com/eg/app/otasky/id6760516151',
+      keyHighlights: [
+        'Built a two-sided marketplace where clients post tasks, compare offers, and hire verified service providers.',
+        'Implemented secure Stripe payment workflows, digital wallet, and earnings withdrawal management.',
+        'Engineered real-time in-app chat, proposal messaging, ratings & reviews, and instant push notifications.',
+        'Designed intuitive workflow for task posting, budget setting, proposal negotiation, and milestone tracking.',
+      ],
+      challengesAndSolutions: [
+        'Challenge: Managing dual-role states (clients vs. taskers) and real-time proposal updates seamlessly. Solution: Separated domain usecases with BLoC state machines and instant push notification synchronization.',
+      ],
+      metrics: ['متوفر على Google Play', 'متوفر على App Store', 'Stripe Payments & Wallet'],
+    ),
+
+    // 2. REWAA | رواء
     PortfolioProject(
       title: 'REWAA',
       arabicTitle: 'رواء',
       category: 'Consultation',
       role: 'Lead Flutter Developer',
-      isFeatured: true,
       description:
           'منصة استشارات رائدة تتيح التواصل الفوري والمباشر مع نخبة من الخبراء والمستشارين المتخصصين في مجالات متعددة، مع واجهة مستخدم سهلة وسرية تامة للمحادثات.',
       tags: ['Flutter', 'Clean Arch', 'BLoC', 'Consultation', 'Encrypted Chat', 'Stripe', 'FCM'],
-      icon: '01',
+      icon: '02',
       architecture: 'Clean Architecture with BLoC Pattern & Secure WebSocket Chat',
       playStoreUrl:
           'https://play.google.com/store/apps/details?id=com.elnooronline.rewa&pcampaignid=web_share',
@@ -241,7 +281,7 @@ abstract final class PortfolioData {
       metrics: ['متوفر على Google Play', 'متوفر على App Store', 'سرية وأمان 100%'],
     ),
 
-    // 2. محامينا
+    // 3. محامينا
     PortfolioProject(
       title: 'Mohamina',
       arabicTitle: 'محامينا',
@@ -250,7 +290,7 @@ abstract final class PortfolioData {
       description:
           'On-demand legal services platform empowering clients to submit case briefs, find specialized licensed lawyers by jurisdiction, and book legal consultations.',
       tags: ['Flutter', 'Legal Tech', 'Maps', 'Dio', 'Clean Architecture'],
-      icon: '02',
+      icon: '03',
       architecture: 'Clean Architecture with Domain UseCases & Token Interceptors',
       playStoreUrl:
           'https://play.google.com/store/apps/details?id=com.elnooronline.muhamina&pcampaignid=web_share',
@@ -267,7 +307,7 @@ abstract final class PortfolioData {
       metrics: ['200+ Verified Attorneys', 'Automated Calendar Sync'],
     ),
 
-    // 3. Abber App | عبر
+    // 4. Abber App | عبر
     PortfolioProject(
       title: 'Abber App',
       arabicTitle: 'عبر',
@@ -276,7 +316,7 @@ abstract final class PortfolioData {
       description:
           'Premier digital consultation platform connecting verified specialists with users for confidential vision analysis, advisory sessions, and scheduled consultations.',
       tags: ['Flutter', 'Consultation', 'Audio Notes', 'Stripe', 'Cubit'],
-      icon: '03',
+      icon: '04',
       architecture: 'Clean Architecture with State Machine & Encrypted Storage',
       playStoreUrl:
           'https://play.google.com/store/apps/details?id=com.app.abber&pcampaignid=web_share',
@@ -293,7 +333,7 @@ abstract final class PortfolioData {
       metrics: ['4.9★ Average Rating', 'Secure Payments via Stripe'],
     ),
 
-    // 4. iQTaxi | Taxi Driver & Taxi User App
+    // 5. iQTaxi | Taxi Driver & Taxi User App
     PortfolioProject(
       title: 'iQTaxi',
       arabicTitle: 'آي كيو تاكسي',
@@ -302,7 +342,7 @@ abstract final class PortfolioData {
       description:
           'Dual ride-hailing ecosystem providing real-time driver dispatching, live turn-by-turn routing, automated fare metering, and seamless payment collection.',
       tags: ['Flutter', 'Google Maps', 'WebSockets', 'BLoC', 'HyperPay'],
-      icon: '04',
+      icon: '05',
       architecture: 'Clean Architecture + WebSocket State Stream + Custom Painter Routes',
       playStoreUrl:
           'https://play.google.com/store/apps/details?id=com.elnooronline.taxi.user&pcampaignid=web_share',
@@ -320,7 +360,7 @@ abstract final class PortfolioData {
       metrics: ['Real-time 60fps Map Tracking', 'Dual Driver/Rider Codebase'],
     ),
 
-    // 5. NOVA X
+    // 6. NOVA X
     PortfolioProject(
       title: 'NOVA X',
       arabicTitle: 'نوفا إكس',
@@ -329,7 +369,7 @@ abstract final class PortfolioData {
       description:
           'Next-generation interactive learning platform offering curated video courses, live streaming masterclasses, quizzes, and downloadable learning certificates.',
       tags: ['Flutter', 'Video Player', 'In-App Purchase', 'Offline Mode'],
-      icon: '05',
+      icon: '06',
       architecture: 'Clean Architecture with Custom Video Player Controller & DRM',
       playStoreUrl:
           'https://play.google.com/store/apps/details?id=com.elnooreonline.elms&pcampaignid=web_share',
@@ -346,7 +386,7 @@ abstract final class PortfolioData {
       metrics: ['Offline Video Caching', 'Interactive Chapter Quizzes'],
     ),
 
-    // 6. مدرسة الأوائل
+    // 7. مدرسة الأوائل
     PortfolioProject(
       title: 'Al-Awael School',
       arabicTitle: 'مدرسة الأوائل',
@@ -355,7 +395,7 @@ abstract final class PortfolioData {
       description:
           'Specialized school portal for study and exam timetables, homework submissions, report cards, fee tracking, and direct teacher-parent conferences.',
       tags: ['Flutter', 'BLoC', 'Dio', 'Notifications', 'Hive'],
-      icon: '06',
+      icon: '07',
       architecture: 'Clean Architecture + Repository Pattern + Hive Cache',
       playStoreUrl:
           'https://play.google.com/store/apps/details?id=com.elnooronline.alawael&pcampaignid=web_share',
@@ -372,7 +412,7 @@ abstract final class PortfolioData {
       metrics: ['10+ Schools Onboarded', 'Zero Lag on Low-End Devices'],
     ),
 
-    // 7. مدارسكم
+    // 8. مدارسكم
     PortfolioProject(
       title: 'Madariscom',
       arabicTitle: 'مدارسكم',
@@ -381,7 +421,7 @@ abstract final class PortfolioData {
       description:
           'Comprehensive education communication ecosystem linking students, parents, and schools with real-time academic tracking, fee settlements, exams, and instant messaging.',
       tags: ['Flutter', 'Clean Arch', 'BLoC', 'Dio', 'FCM', 'Payments'],
-      icon: '07',
+      icon: '08',
       architecture: 'Clean Architecture with BLoC Pattern & Dio Interceptors',
       playStoreUrl:
           'https://play.google.com/store/apps/details?id=com.elnooronline.madaresco&pcampaignid=web_share',
@@ -399,7 +439,7 @@ abstract final class PortfolioData {
       metrics: ['50k+ Active Users', '99.9% Crash-Free', '60 FPS Transitions'],
     ),
 
-    // 8. دليلكم
+    // 9. دليلكم
     PortfolioProject(
       title: 'Dalilkom',
       arabicTitle: 'دليلكم',
@@ -408,7 +448,7 @@ abstract final class PortfolioData {
       description:
           'Smart daily-life discovery hub allowing users to explore local businesses, service providers, operational hours, offers, and turn-by-turn navigation.',
       tags: ['Flutter', 'Google Maps', 'Geolocation', 'Cubit', 'REST API'],
-      icon: '08',
+      icon: '09',
       architecture: 'Feature-First Clean Architecture with Cubit & Geolocation Service',
       playStoreUrl:
           'https://play.google.com/store/apps/details?id=com.elnooronline.dalilkoom&pcampaignid=web_share',
@@ -426,7 +466,7 @@ abstract final class PortfolioData {
       metrics: ['Instant Nearby Search', 'Clustered 10k+ Points of Interest'],
     ),
 
-    // 9. CHAMBER TABUK | غرفة تبوك
+    // 10. CHAMBER TABUK | غرفة تبوك
     PortfolioProject(
       title: 'Chamber Tabuk',
       arabicTitle: 'غرفة تبوك',
@@ -435,7 +475,7 @@ abstract final class PortfolioData {
       description:
           'Official enterprise digital portal for Tabuk Chamber of Commerce providing organizational circulars, investment committee dashboards, articles, and member services.',
       tags: ['Flutter', 'Enterprise', 'PDF Export', 'Clean Arch', 'FCM'],
-      icon: '09',
+      icon: '10',
       architecture: 'Clean Architecture with Role-Based Access Control',
       playStoreUrl:
           'https://play.google.com/store/apps/details?id=com.elnooronline.tabukchamber&pcampaignid=web_share',
