@@ -365,7 +365,17 @@ class _HomePageState extends State<HomePage> {
 
   // 3. PROJECTS SECTION WITH FILTERING & SEARCH
   Widget _projectsSection(BuildContext context) {
-    final categories = ['All', 'Consultation', 'Legal Tech', 'Ride-Hailing', 'E-Learning', 'Education', 'Local Services', 'Enterprise'];
+    final categories = [
+      'All',
+      'Service Marketplace',
+      'Consultation',
+      'Legal Tech',
+      'Ride-Hailing',
+      'E-Learning',
+      'Education',
+      'Local Services',
+      'Enterprise',
+    ];
 
     final filteredProjects = PortfolioData.projects.where((p) {
       final matchesCategory = _selectedCategory == 'All' || p.category == _selectedCategory;

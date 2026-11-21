@@ -200,7 +200,7 @@ abstract final class PortfolioData {
       company: 'Mega Service Group',
       role: 'Flutter Developer',
       location: 'Australia (Remote)',
-      period: 'Jun 2025 – May 2026',
+      period: 'Jan 2026 – May 2026',
       highlights: [
         'Architected and delivered Otasky, an on-demand two-sided service marketplace connecting clients and taskers.',
         'Implemented secure Stripe payment flows, wallet balance, transaction logs, and payout withdrawal management.',
